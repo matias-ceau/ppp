@@ -1,0 +1,26 @@
+instruments:
+    b:   bass
+    g:   guitar
+    d:   drums
+    k:   keyboard
+    u:   ukulele
+    '0': None
+    '1': any
+
+categories:
+    standards:   [100,True]
+    skills:      [90 ,True]
+    melody:      [80, True]
+    harmony:     [80, True]
+    etudes:      [50, True]
+    composition: [40, True]
+    theory:      [80, False]
+
+labels: [ID, category, name, instrument, tags, description, link, priority, status, created, log, count, goal, urg]
+
+priorities:
+    H: 2
+    M: 1.5
+    L: 0.5
+
+cmds: [add,delete,mod,ls,practice,stats,undo]
