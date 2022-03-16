@@ -19,6 +19,7 @@ class Practice:
             self.__dict__.update(config)
         self.data   = self._getdata("practices.csv")
         self.backup = self._getdata("backup.csv")
+        self.status = 0
 
     def _getdata(self,path):
         if path not in os.listdir('.'):
@@ -30,9 +31,17 @@ class Practice:
         self.backup.to_csv('backup.csv',index=False)
         self.data.to_csv("practices.csv",index=False)
 
-    def _niceprint(self):
-        not_nice = ['link','priority','created','log']
-        df = self.data.drop(columns=not_nice).tail(10)
+    def _niceprint(self,exclude=None,
+                   sort=False,
+                   head=False,
+                   tail=False):
+        df = self.data.drop(columns=exclude)
+        if sort:
+            df.sort_values(sort,ascending=False,inplace=True)
+        if tail:
+            df = df.tail(tail)
+        elif tail:
+            df = df.tail(tail)
         print(tabulate(df, headers='keys', tablefmt='psql', showindex=False))
 
     def add(self):
@@ -53,10 +62,15 @@ class Practice:
              'goal'          : self.goal,
              'urg'           : ['???????????']}
         df = pd.DataFrame(t)
-        self.data = pd.concat([self.data,df],ignore_index=True)
-        self._save()
-        self._niceprint()
-        print('\n',f"Practice {self.ID} successfully created!")
+        if (self.category in self.categories) & (self.name!=None) & (self.instrument!=None):
+            self.data = pd.concat([self.data,df],ignore_index=True)
+            self._save()
+            self._niceprint(exclude=['description','link','created','log'],
+                            tail=10)
+            print('\n',f"Practice {self.ID} successfully created!")
+        else:
+            print('Something went wrong!')
+
 
     def delete(self):
         """Delete practice with inputed ID."""
@@ -123,4 +137,5 @@ a = parser.parse_args(namespace=practice)
 # print(practice.instrument)
 # print(practice.created)
 # print(practice.count)
-Practice.__dict__[practice.cmd](practice)
+print(practice.__dict__)
+#Practice.__dict__[practice.cmd](practice)
