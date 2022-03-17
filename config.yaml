@@ -16,11 +16,16 @@ categories:
     composition: [40, True]
     theory:      [80, False]
 
-labels: [ID, category, name, instrument, tags, description, link, priority, status, created, log, count, goal, urg]
+labels: [ID, category, name, instrument, tags, description, links, priority, status, created, log, count, goal, urg]
 
 priorities:
     H: 2
     M: 1.5
     L: 0.5
 
-cmds: [add,delete,mod,ls,practice,stats,undo]
+cmds: [add,delete,mod,ls,practice,stats,undo,view]
+
+status_types:
+    0: inactive
+    1: active
+    2: completed
