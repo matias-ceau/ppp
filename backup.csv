@@ -1,71 +1,15 @@
 ID,category,name,instrument,tags,description,links,priority,status,created,log,count,goal,urg
-2.0,,,,,,,,,1647357261.6507063,,0.0,,???????????
-3.0,,,,,,,,,1647357262.7600515,,0.0,,???????????
-4.0,,,,,,,,,1647357263.806902,,0.0,,???????????
-5.0,,,,,,,,,1647357264.9006236,,0.0,,???????????
-6.0,,,,,,,,,1647357265.7913113,,0.0,,???????????
-8.0,,,,,,,,,1647357266.6506667,,0.0,,???????????
-9.0,,,,,,,,,1647357267.1037805,,0.0,,???????????
-10.0,theory,,,,,,,,1647357360.6781068,,0.0,,???????????
-11.0,theory,,,,,,,,1647357514.7341492,,0.0,,???????????
-12.0,theory,,,,,,,,1647357520.5693383,,0.0,,???????????
-13.0,theory,,,,,,,,1647357541.5563047,,0.0,,???????????
-14.0,theory,,,,,,,,1647357567.3534725,,0.0,,???????????
-15.0,theory,,,,,,,,1647357594.2646198,,0.0,,???????????
-16.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647358080.0711432,,0.0,,???????????
-17.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647358666.4888446,,0.0,,???????????
-18.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444227.824771,,0.0,,???????????
-19.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444230.1840944,,0.0,,???????????
-20.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444231.4665956,,0.0,,???????????
-21.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444232.3884509,,0.0,,???????????
-22.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444233.1853163,,0.0,,???????????
-23.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444233.810297,,0.0,,???????????
-24.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444234.32591,,0.0,,???????????
-25.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444234.810274,,0.0,,???????????
-26.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444235.3571374,,0.0,,???????????
-27.0,etudes,bla,bass,,,http://fjhlgvltdj,,,1647444511.1283038,,0.0,,???????????
-28.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446980.2327628,,0.0,,???????????
-29.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446981.8733473,,0.0,,???????????
-30.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446984.5212634,,0.0,,???????????
-31.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446985.3024943,,0.0,,???????????
-32.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446985.8649807,,0.0,,???????????
-33.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446986.2399712,,0.0,,???????????
-34.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647446986.599339,,0.0,,???????????
-35.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647447164.7805848,,0.0,,???????????
-36.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647447166.3742974,,0.0,,???????????
-37.0,etudes,bla,bass,,,http://fjhlgvltdj,,0.0,1647447250.6554997,,0.0,,???????????
-38.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511327.8869095,,0.0,10.0,???????????
-39.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511368.8521593,,0.0,10.0,???????????
-40.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511371.4883356,,0.0,10.0,???????????
-41.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511372.363323,,0.0,10.0,???????????
-42.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511373.0976872,,0.0,10.0,???????????
-43.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511373.8320525,,0.0,10.0,???????????
-44.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511374.5208256,,0.0,10.0,???????????
-45.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511379.8176265,,0.0,10.0,???????????
-46.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511387.0221002,,0.0,10.0,???????????
-47.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511486.5128884,,0.0,10.0,M
-48.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511488.2003632,,0.0,10.0,M
-49.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511493.592765,,0.0,10.0,H
-50.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511494.9690278,,0.0,10.0,H
-51.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511495.953384,,0.0,10.0,H
-52.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511497.1564915,,0.0,10.0,H
-53.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511497.8908565,,0.0,10.0,H
-54.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511498.4377227,,0.0,10.0,H
-55.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511499.0939648,,0.0,10.0,H
-56.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511501.6876762,,0.0,10.0,H
-57.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,,0.0,1647511502.484539,,0.0,10.0,H
-58.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511614.6333652,,0.0,10.0,???
-59.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511616.2270916,,0.0,10.0,???
-60.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511616.88333,,0.0,10.0,???
-61.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511617.2895744,,0.0,10.0,???
-62.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511617.7270682,,0.0,10.0,???
-63.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511618.1176872,,0.0,10.0,???
-64.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511618.6176786,,0.0,10.0,???
-65.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511618.977049,,0.0,10.0,???
-66.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511619.336419,,0.0,10.0,???
-67.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511619.7114136,,0.0,10.0,???
-68.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511620.039534,,0.0,10.0,???
-69.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511620.695772,,0.0,10.0,???
-70.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511621.055143,,0.0,10.0,???
-72.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511621.930128,,0.0,10.0,???
-73.0,etudes,bla,bass,hg jhg,vmkj vbltkjv mbtkdb,http://fjhlgvltdj,H,0.0,1647511622.3988717,,0.0,10.0,???
+20,etudes,francis,bass,,,,H,0.0,1647618807.3711522,,0.0,10.0,0.0
+21,etudes,francis,bass,,,,H,0.0,1647618810.2542555,,0.0,10.0,0.0
+22,etudes,francis,bass,,,,H,0.0,1647618811.503752,,0.0,10.0,0.0
+23,etudes,francis,bass,,,,H,0.0,1647618812.3835957,,0.0,10.0,0.0
+24,etudes,francis,bass,,,,H,0.0,1647618813.0287795,,0.0,10.0,0.0
+25,etudes,francis,bass,,,,H,0.0,1647618813.5335078,,0.0,10.0,0.0
+26,etudes,francis,bass,,,,H,0.0,1647618814.1160915,,0.0,10.0,0.0
+27,etudes,francis,bass,,,,H,0.0,1647618814.7845738,,0.0,10.0,0.0
+28,etudes,francis,bass,,,,H,0.0,1647618815.3310213,,0.0,10.0,0.0
+29,etudes,francis,bass,,,,H,0.0,1647618815.776338,,0.0,10.0,0.0
+30,etudes,francis,bass,,,,H,0.0,1647618816.1954696,,0.0,10.0,0.0
+1,etudes,francis,guitar,,,,H,0.0,1647618835.328139,,0.0,10.0,0.0
+2,etudes,francis,bass,,,,H,1.0,1647618836.144643,,0.0,10.0,5.2
+3,etudes,francis,bass,,,,H,0.0,1647618836.7950766,,0.0,10.0,0.0

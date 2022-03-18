@@ -1,26 +1,47 @@
+special_tags:
+    any_tag:          1
+    # standards
+    autumn_leaves:    5
+    blue_bossa:       20
+    # skills
+    # melody
+    # harmony
+    # etudes
+    # composition
+    # theory
+    ear_training:     10
+    retranscription:  10
+
 instruments:
-    b:   bass
-    g:   guitar
-    d:   drums
-    k:   keyboard
-    u:   ukulele
-    '0': None
-    '1': any
+    bass:   80
+    guitar: 100
+    drums:  10
+    keys:   70
+    uke:    5
+    none:   0
+    any:    0
 
 categories:
-    standards:   [100,True]
-    skills:      [90 ,True]
-    melody:      [80, True]
-    harmony:     [80, True]
-    etudes:      [50, True]
-    composition: [40, True]
-    theory:      [80, False]
+    standards:   100
+    skills:      90
+    melody:      80
+    harmony:     80
+    etudes:      50
+    composition: 40
+    theory:      80
 
-labels: [ID, category, name, instrument, tags, description, links, priority, status, created, log, count, goal, urg]
+labels:     [category, name, instrument, tags, description, links, priority, status, created, log, count, goal, urg]
+modifiable: [category, name, instrument, tags, description, links, priority, status, goal]
+
+default_goal: 10
+default_status: 0
+default_priority: '.'
+time_constant: 7_776_000
 
 priorities:
     H: 2
     M: 1.5
+    .: 1
     L: 0.5
 
 cmds: [add,delete,mod,ls,practice,stats,undo,view]
@@ -29,3 +50,9 @@ status_types:
     0: inactive
     1: active
     2: completed
+
+verbosity:
+    0: 10
+    1: 20
+    2: 40
+    3: 999
