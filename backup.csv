@@ -1,1 +1,5 @@
-ID,category,name,instrument,tags,description,links,priority,status,created,count,goal,urg,log
+ID,category,name,instrument,tags,description,links,priority,status,created,count,goal,urg,length,log
+1,etudes,kghkg,bass,,,,.,1.0,1647889120.0,0.0,10.0,1.3,1.0,start
+2,etudes,kghkg,bass,,lkjh,,.,0.0,1647889131.0,0.0,10.0,0.0,1.0,start
+3,etudes,kghkg,bass,,lkjh lmkm,,.,0.0,1647889133.0,0.0,10.0,0.0,1.0,start
+4,etudes,kghkg,bass,blue_bossa,lkjh lmkm,https://www.google.fr ; edFriedlandBassGrooves/EdFriedland-Track-01.mp3,H,2.0,1647889138.0,15.0,15.0,0.0,1.0,start 0x6238ccc5 0x6238cea8 0x6238cec9 0x6238cef2 0x6238cf7c 0x6238d0e4 0x6238d184 0x6238d401 0x6238d4a4 0x6238d516 0x6238d52a 0x6238d558 0x6238d579 0x6238d5b1 0x6238d64e

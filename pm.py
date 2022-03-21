@@ -1,3 +1,5 @@
+#! /bin/python3
+
 import numpy as np
 import pandas as pd
 import sys
@@ -87,6 +89,7 @@ class Practice:
         print(tabulate(df, headers='keys', tablefmt='psql', showindex=True))
 
     def _check_and_archive(self):
+        self.backup = self.data.copy()
         for i in self.data.index:
             if self.data.loc[i,'status'] == 1:
                 count = self.data.loc[i,'count']
@@ -148,8 +151,13 @@ class Practice:
 
     def _practice_picker(self):
         choosing_list = []
-        for i in self.data.index:
-            if self.data.loc[i,'status'] == 1:
+        df = self.data.copy()
+        for i in df.index:
+            if df.loc[i,'status'] == 1:
+                for thing in ['instrument', 'category', 'length']:
+                    if self.__dict__[thing]:
+                        if df.loc[i,thing] != self.__dict__[thing]:
+                            df.drop([i],inplace=True) 
                 choosing_list += [i]*round(1000*self.data.loc[i,'urg'])
         pick = random.choice(choosing_list)
         return pick
@@ -162,8 +170,6 @@ class Practice:
                        head=self.verbosity[self.verbose],
                        tail=None)
 
-
-
     def add(self):
         """Add practice session."""
         self.backup = self.data.copy()
@@ -173,12 +179,12 @@ class Practice:
             print("You need to pick a practice name.") ; return
         if not self.instrument:
             print("You need to choose an instrument.") ; return
+        if not self.length:
+            self.length = [2]
         self._list_many(listlist=['category','name','instrument','tags','description','links','priority','status'])
         self.ID = [i for i in range(1,1000) if i not in self.data.index][:1]
-        print(type(self.ID[0]))
         if type(self.ID[0]) != int: self.ID = [1]
         for thing in ['goal','status','priority']:
-            print(vars(self)[thing])
             if self.__dict__[thing] in [[''],None]:
                 self.__dict__[thing] = [self.__dict__['default_'+thing]]
         t = {'category'      : self.category,
@@ -186,14 +192,15 @@ class Practice:
              'instrument'    : self.instrument,
              'tags'          : self.tags,
              'description'   : self.description,
-             'links'         : self.links,
+             'links'         : [' ; '.join(self.links)],
              'priority'      : self.priority,
              'status'        : self.status,
              'created'       : [round(time.time())],
-             'log'           : ['start'],
              'count'         : [0],
              'goal'          : self.goal,
-             'urg'           : [0]}
+             'urg'           : [0],
+             'length'        : self.length,
+             'log'           : ['start']}
         df = pd.DataFrame(t,index=self.ID)
         df.index.name = 'ID'
         self.data = pd.concat([self.data,df])
@@ -244,7 +251,8 @@ class Practice:
                     print(f"""
 {'=' * (len(str(ID[0]))+42+len(self.obj['name']))}
 ({ID[0]}) {int(self.obj['status'])} {self.obj['name']:>39}
-{int(self.obj['count'])}/{int(self.obj['goal']):<10} {self.obj['priority']} {self.obj['urg']}
+{int(self.obj['count'])}/{int(self.obj['goal']):<10} priority: {self.obj['priority']} urgency: {self.obj['urg']}
+lenght: {self.obj['length']}
 {'=' * (len(str(ID[0]))+42+len(self.obj['name']))}
 
 *CATEGORY*
@@ -308,6 +316,10 @@ class Practice:
             for ID in df.index:
                 if self.status != df.loc[ID,'status'] :
                     drop_list.append(ID)
+        if self.length:
+            for ID in df.index:
+                if self.length > df.loc[ID,'length']:
+                    drop_list.append(ID)
         # goal
         # log count created
         #################################################################
@@ -318,27 +330,37 @@ class Practice:
                        tail=None,
                        drop_list=drop_list)
 
-    def practice(self):
+    def practice(self,interactive=True):
         """Choose practice or get weighted random practice and launch it."""
+        if interactive == False:
+            if self.ID == None:
+                print("You need to chose a practice.\n")
+                return
         if self.ID == None:
             pid = self._practice_picker()
+            self.ID = [pid]
+            self.view()
             while input(f"Choose practice {pid}: {self.data.loc[pid,'name']}?\n").upper() not in 'Y':
                 pid = self._practice_picker()
-            self.ID = [pid]
+                self.ID = [pid]
+                self.view()
         self.view()
-        if input("Confirm?\n") == 'n':
-            return
-        if self.count:
-            count = self.count
-        else:
-            count = 1
+        if interactive == True:
+            if input("Confirm?\n") == 'n':
+                return
         self.data.loc[self.ID,'log'] += ' '+str(hex(round(time.time())))
-        self.data.loc[self.ID,'count'] += count
+        self.data.loc[self.ID,'count'] += 1
         self._save()
-        print(f"{count} session(s) logged!\n")
-        if self.data.loc[self.ID[0],'links'] != np.nan:
-            if input('Open links?\n').upper() == 'Y':
-                subprocess.run(f'xdg-open {self.links}'.split(' '))
+        print(f"Session logged!\n")
+        if interactive and self.data.loc[self.ID[0],'links'] != np.nan:
+            if input('Open links?\n').upper() in 'Y':
+                for l in self.data.loc[self.ID[0],'links'].split(' ; '):
+                    if '://' in l:
+                        print(l)
+                        subprocess.run(f"xdg-open {l}".split(' '))
+                    else:
+                        print(l)
+                        subprocess.run(f"xdg-open {self.res_path}{l}".split(' '))
 
     def on(self):
         """Activate practice."""
@@ -394,22 +416,10 @@ parser.add_argument('--verbose', '-v', action='count', default=0)
 parser.add_argument('-s','--status',choices = practice.status_types.keys(), type=int)
 parser.add_argument('-g', '--goal',type=int)
 parser.add_argument('-u','--urg')
+parser.add_argument('--length', '-L', action='count')
 parser.add_argument('--created')
 parser.add_argument('--log')
 parser.add_argument('--count',type=int)
 
 a = parser.parse_args(namespace=practice)
-# print(practice.ID)
-# print(practice.category)
-# print(practice.name)
-# print(practice.link)
-# print(practice.instrument)
-# print(practice.created)
-# print(practice.count)
-print(practice.__dict__)
-print("#"*50)
-print("#"*50)
 Practice.__dict__[practice.cmd](practice)
-print("#"*50)
-# print(practice.data.loc[practice.ID[0],:])
-# print(practice.data)
