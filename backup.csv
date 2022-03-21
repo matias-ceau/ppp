@@ -15,7 +15,7 @@ ID,category,name,instrument,tags,description,links,priority,status,created,count
 14,skills,blues variation p2,bass,blues,,https://scottsbasslessons.com/courses/blues-variations-part-2/introduction/introduction-1,.,0,1647894150,0,2,0.0,2,start
 15,skills,blues british p1,bass,blues,,https://scottsbasslessons.com/courses/the-british-invasion-part-1/introduction/introduction,.,0,1647894174,0,2,0.0,2,start
 16,skills,blues british p2,bass,blues,,https://scottsbasslessons.com/courses/the-british-invasion-part-2/introduction/introduction,.,0,1647894195,0,2,0.0,2,start
-17,etudes,boss the bossa,bass,blue_bossa,,https://scottsbasslessons.com/grading-level/level-2/level-2-practice?pieceId=188329,.,1,1647894340,0,10,1.501,2,start
+17,etudes,boss the bossa,bass,blue_bossa,,https://scottsbasslessons.com/grading-level/level-2/level-2-practice?pieceId=188329,.,1,1647894340,0,10,1.502,2,start
 18,books,Barry Harris guitar,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647895179,0,20,1.101,2,start
 19,books,how to improvise,none,,,books/crookImprovise.pdf,.,1,1647895553,0,25,0.1,2,start
 20,books,joe pass guitar method,none,,,books/joePass.pdf,.,1,1647895592,0,3,0.1,2,start
@@ -78,10 +78,6 @@ ID,category,name,instrument,tags,description,links,priority,status,created,count
 77,standards,solar,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901110,0,10,0.0,2,start
 78,standards,blue bossa,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901111,0,10,0.0,2,start
 79,standards,ceora,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901112,0,10,0.0,2,start
-80,standards,"you dont know what love is -l 50easyjazzsolos.pdf
-python3 ppp.py add -C standards -I guitar -t transcriptions -N there will never be another you young -l 50easyjazzsolos.pdf
-python3 ppp.py add -C standards -I guitar -t transcriptions -N oh lady be good -l 50easyjazzsolos.pdf
-python3 ppp.py add -C standards -I guitar -t transcriptions -N youre driving me crazy young",guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901112,0,10,0.0,2,start
 81,standards,so what,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901113,0,10,0.0,2,start
 82,standards,freddie freeloader,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901114,0,10,0.0,2,start
 83,standards,bags groove,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901114,0,10,0.0,2,start
@@ -89,7 +85,6 @@ python3 ppp.py add -C standards -I guitar -t transcriptions -N youre driving me 
 85,standards,bye bye blackbird,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901116,0,10,0.0,2,start
 86,standards,four davies,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901117,0,10,0.0,2,start
 87,standards,solar davies,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901117,0,10,0.0,2,start
-88,standards,walkin,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901118,0,10,0.0,2,start
 89,standards,doxy,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901119,0,10,0.0,2,start
 90,standards,green dolphin street,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901119,0,10,0.0,2,start
 91,standards,blue train,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901120,0,10,0.0,2,start
@@ -103,6 +98,43 @@ python3 ppp.py add -C standards -I guitar -t transcriptions -N youre driving me 
 99,standards,freddie freeloader wynton,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901127,0,10,0.0,2,start
 100,standards,someday my prince kelly,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647901127,0,10,0.0,2,start
 101,skills,kenny burrel con carne,guitar,transcriptions jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901760,0,10,0.0,2,start
-102,skills,charlie christian grand slam-l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,guitar,transcriptions jens,,,.,0,1647901761,0,10,0.0,2,start
+102,skills,charlie christian grand slam,guitar,transcriptions jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901761,0,10,0.0,2,start
 103,skills,grant green cool blues,guitar,transcriptions jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901762,0,10,0.0,2,start
 104,skills,montgomery four on six,guitar,transcriptions jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901763,0,10,0.0,2,start
+105,skills,george benson borgia stick,guitar,transcriptions jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901764,0,10,0.0,2,start
+106,skills,50 licks chapter 1,guitar,,1 to 10,50lickspatreon.pdf,.,1,1647901988,0,10,1.9,2,start
+107,skills,50 licks chapter 2,guitar,,11 to 20,50lickspatreon.pdf,.,0,1647902009,0,10,0.0,2,start
+108,skills,50 licks chapter 3,guitar,,21 to 30,50lickspatreon.pdf,.,0,1647902021,0,10,0.0,2,start
+109,skills,50 licks chapter 4,guitar,,31 to 40,50lickspatreon.pdf,.,0,1647902080,0,10,0.0,2,start
+110,skills,50 licks chapter 5,guitar,,41 to 50,50lickspatreon.pdf,.,0,1647902090,0,10,0.0,2,start
+88,standards,there will never be another you young,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647902785,0,10,0.0,2,start
+111,standards,oh lady be good,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647902785,0,10,0.0,2,start
+112,standards,youre driving me crazy young,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647902786,0,10,0.0,2,start
+113,standards,you dont know what love is,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647902787,0,10,0.0,2,start
+80,standards,there will never be another you young,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647903012,0,10,0.0,2,start
+114,standards,oh lady be good,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647903013,0,10,0.0,2,start
+115,standards,youre driving me crazy young,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647903014,0,10,0.0,2,start
+116,standards,you dont know what love is,guitar,transcriptions,,50easyjazzsolos.pdf,.,0,1647903015,0,10,0.0,2,start
+117,skills,C major scale,piano,,,,.,1,1647903179,0,1,1.6,1,start
+118,skills,G major scale,piano,,,,.,0,1647903180,0,10,0.0,2,start
+119,skills,D major scale,piano,,,,.,0,1647903181,0,10,0.0,2,start
+120,skills,A major scale,piano,,,,.,0,1647903181,0,10,0.0,2,start
+121,skills,E major scale,piano,,,,.,0,1647903182,0,10,0.0,2,start
+122,skills,B major scale,piano,,,,.,0,1647903183,0,10,0.0,2,start
+123,skills,Fsh major scale,piano,,,,.,0,1647903184,0,10,0.0,2,start
+124,skills,Db major scale,piano,,,,.,0,1647903185,0,10,0.0,2,start
+125,skills,Ab major scale,piano,,,,.,0,1647903186,0,10,0.0,2,start
+126,skills,Eb major scale,piano,,,,.,0,1647903187,0,10,0.0,2,start
+127,skills,Bb major scale,piano,,,,.,0,1647903188,0,10,0.0,2,start
+128,skills,F major scale,piano,,,,.,0,1647903189,0,10,0.0,2,start
+129,skills,C home chords,piano,,,,.,1,1647903269,0,1,1.6,1,start
+130,skills,G home chords,piano,,,,.,0,1647903270,0,10,0.0,2,start
+131,skills,D home chords,piano,,,,.,0,1647903271,0,10,0.0,2,start
+132,skills,A home chords,piano,,,,.,0,1647903272,0,10,0.0,2,start
+133,skills,E home chords,piano,,,,.,0,1647903273,0,10,0.0,2,start
+134,skills,B home chords,piano,,,,.,0,1647903274,0,10,0.0,2,start
+135,skills,Fsh home chords,piano,,,,.,0,1647903275,0,10,0.0,2,start
+136,skills,Db home chords,piano,,,,.,0,1647903276,0,10,0.0,2,start
+137,skills,Ab home chords,piano,,,,.,0,1647903277,0,10,0.0,2,start
+138,skills,Eb home chords,piano,,,,.,0,1647903278,0,10,0.0,2,start
+139,skills,Bb home chords,piano,,,,.,0,1647903279,0,10,0.0,2,start

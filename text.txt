@@ -1,5 +1,12 @@
-python3 ppp.py add -C skills -I guitar -t transcriptions jens -N kenny burrel con carne -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
-python3 ppp.py add -C skills -I guitar -t transcriptions jens -N charlie christian grand slam-l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
-python3 ppp.py add -C skills -I guitar -t transcriptions jens -N grant green cool blues -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
-python3 ppp.py add -C skills -I guitar -t transcriptions jens -N montgomery four on six -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
-python3 ppp.py add -C skills -I guitar -t transcriptions jens -N george benson borgia stick -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
+python3 ppp.py add -I piano -C skills -g 1 -s 1 -L -N C home chords &&\
+python3 ppp.py add -I piano -C skills -N G home chords &&\
+python3 ppp.py add -I piano -C skills -N D home chords &&\
+python3 ppp.py add -I piano -C skills -N A home chords &&\
+python3 ppp.py add -I piano -C skills -N E home chords &&\
+python3 ppp.py add -I piano -C skills -N B home chords &&\
+python3 ppp.py add -I piano -C skills -N Fsh home chords &&\
+python3 ppp.py add -I piano -C skills -N Db home chords &&\
+python3 ppp.py add -I piano -C skills -N Ab home chords &&\
+python3 ppp.py add -I piano -C skills -N Eb home chords &&\
+python3 ppp.py add -I piano -C skills -N Bb home chords &&\
+python3 ppp.py add -I piano -C skills -N F home chords
