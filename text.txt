@@ -1,0 +1,5 @@
+python3 ppp.py add -C skills -I guitar -t transcriptions jens -N kenny burrel con carne -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
+python3 ppp.py add -C skills -I guitar -t transcriptions jens -N charlie christian grand slam-l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
+python3 ppp.py add -C skills -I guitar -t transcriptions jens -N grant green cool blues -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
+python3 ppp.py add -C skills -I guitar -t transcriptions jens -N montgomery four on six -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/
+python3 ppp.py add -C skills -I guitar -t transcriptions jens -N george benson borgia stick -l https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/

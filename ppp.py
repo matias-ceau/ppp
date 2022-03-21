@@ -162,7 +162,7 @@ class Practice:
         pick = random.choice(choosing_list)
         return pick
 
-    def find_next(self):
+    def next(self):
         """Find next practice to activate."""
         df = self._calculate_inactive()
         self._niceprint(df=df,exclude='default',
@@ -192,7 +192,7 @@ class Practice:
              'instrument'    : self.instrument,
              'tags'          : self.tags,
              'description'   : self.description,
-             'links'         : [' ; '.join(self.links)],
+             'links'         : self.links,
              'priority'      : self.priority,
              'status'        : self.status,
              'created'       : [round(time.time())],
@@ -354,13 +354,20 @@ lenght: {self.obj['length']}
         print(f"Session logged!\n")
         if interactive and self.data.loc[self.ID[0],'links'] != np.nan:
             if input('Open links?\n').upper() in 'Y':
-                for l in self.data.loc[self.ID[0],'links'].split(' ; '):
-                    if '://' in l:
-                        print(l)
-                        subprocess.run(f"xdg-open {l}".split(' '))
-                    else:
-                        print(l)
-                        subprocess.run(f"xdg-open {self.res_path}{l}".split(' '))
+                self.open()
+
+    def open(self):
+        """Open links without doing anything else."""
+        for l in self.data.loc[self.ID[0],'links'].split(' '):
+            if '://' in l:
+                subprocess.run(f"xdg-open {l}".split(' '))
+            elif l[0]=='@':
+                print('Heloooooo')
+                for f in os.listdir(f"{self.res_path}/{l[1:]}"):
+                    print(f)
+                    subprocess.run(f"xdg-open {self.res_path}/{l[1:]}/{f}".split(' '))
+            else:
+                subprocess.run(f"xdg-open {self.res_path}/{l}".split(' '))
 
     def on(self):
         """Activate practice."""
