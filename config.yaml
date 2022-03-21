@@ -16,8 +16,8 @@ instruments:
     bass:   80
     guitar: 100
     drums:  10
-    keys:   70
-    uke:    5
+    keyboard:   70
+    ukulele:    5
     none:   0
     any:    0
 
@@ -30,7 +30,7 @@ categories:
     composition: 40
     theory:      80
 
-labels:     [category, name, instrument, tags, description, links, priority, status, created, log, count, goal, urg]
+labels:     [category, name, instrument, tags, description, links, priority, status, created, count, goal, urg, log]
 modifiable: [category, name, instrument, tags, description, links, priority, status, goal]
 
 default_goal: 10
@@ -44,15 +44,15 @@ priorities:
     .: 1
     L: 0.5
 
-cmds: [add,delete,mod,ls,practice,stats,undo,view]
+cmds: [add,delete,mod,ls,practice,stats,undo,view,on,off,archive]
 
 status_types:
     0: inactive
     1: active
-    2: completed
+    2: archived
 
 verbosity:
-    0: 10
-    1: 20
-    2: 40
+    0: 20
+    1: 40
+    2: 80
     3: 999

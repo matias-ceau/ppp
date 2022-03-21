@@ -8,6 +8,7 @@ import re
 import subprocess
 import argparse
 import yaml
+import random
 from tabulate import tabulate
 #==========================================================================================================
 
@@ -22,6 +23,7 @@ class Practice:
         self.backup           = self._getdata("backup.csv")
         self.obj              = None
         self.excluded_columns = ['description','links','created','log']
+        self._check_and_archive()
         self._update()
 
     def _getdata(self,path):
@@ -34,7 +36,7 @@ class Practice:
 
     def _update(self):
         for i in self.data.index:
-            self.data.loc[i,'urg'] = self._calculate_urgency(i)
+            self.data.loc[i,'urg'] = self._calculate_urgency(i,self.data)
             self._save()
 
     def _save(self):
@@ -56,14 +58,18 @@ class Practice:
         for i in listlist:
             self.__dict__[i] = self._list(self.__dict__[i])
 
-    def _niceprint(self,exclude='default',
+    def _niceprint(self,
+                   df = 'default',
+                   exclude='default',
                    sort=False,
                    head=False,
                    tail=False,
                    ascending=False,
                    drop_list=None,
                    one=False):
-        df = self.data.copy()
+        if type(df) == str:
+            if df == 'default':
+                df = self.data.copy()
         if one:
             if one in df.index:
                 df = df.loc[one,:]
@@ -80,11 +86,28 @@ class Practice:
             df = df.head(head)
         print(tabulate(df, headers='keys', tablefmt='psql', showindex=True))
 
-    def _calculate_urgency(self,ID):
-        if ID not in self.data.index:
+    def _check_and_archive(self):
+        for i in self.data.index:
+            if self.data.loc[i,'status'] == 1:
+                count = self.data.loc[i,'count']
+                goal = self.data.loc[i,'goal']
+                if count >= goal:
+                    self.view(manual=i)
+                    inp = input(f"[Archive practice? ({int(count)}/{int(goal)})]\nUpdate goal?\n")
+                    if inp.isnumeric():
+                        self.data.loc[i,'goal'] = int(inp)
+                    else:
+                        self.data.loc[i,'status'] = 2
+                    self._save()
+                    self._update()
+                    self.view(manual=i)
+
+
+    def _calculate_urgency(self,ID,df):
+        if ID not in df.index:
             return
         urgency = 0
-        p = self.data.loc[ID,:]
+        p = df.loc[ID,:]
         if p['status'] != 1:
             return 0
         tags = p['tags']
@@ -98,19 +121,48 @@ class Practice:
             if i in self.instruments.keys():
                 urgency += self.instruments[i]
         urgency += self.categories[p['category']]
-        urgency *= 1+(abs(p['goal']-p['count'])/p['goal'])
+        urgency *= 2-(abs(p['goal']-p['count'])/p['goal'])
         urgency *= self.priorities[p['priority']]
         urgency *= 1 + abs(time.time() - p['created'])/self.time_constant
-        return urgency/100
+        return round(urgency/100,3)
 
     def _format_date(self,date):
         try:
-            if type(date) in [int,float,np.float64]:
+            if type(date) in [int,float,np.float64,np.int64]:
                 return str(datetime.datetime.fromtimestamp(date)).split('.')[0]
+            if type(date) == str:
+                last = int(date.split(' ')[-1],16)
+                return self._format_date(last)
             else:
                 return [self._format_date(i) for i in date]
         except:
             return None
+
+    def _calculate_inactive(self):
+        df = self.data.copy()
+        df.drop(df[df['status'] != 0].index,inplace=True)
+        df['status'] = [1]*len(df)
+        for i in df.index:
+            df.loc[i,'urg'] = self._calculate_urgency(i,df)
+        return df
+
+    def _practice_picker(self):
+        choosing_list = []
+        for i in self.data.index:
+            if self.data.loc[i,'status'] == 1:
+                choosing_list += [i]*round(1000*self.data.loc[i,'urg'])
+        pick = random.choice(choosing_list)
+        return pick
+
+    def find_next(self):
+        """Find next practice to activate."""
+        df = self._calculate_inactive()
+        self._niceprint(df=df,exclude='default',
+                       sort=['urg'],
+                       head=self.verbosity[self.verbose],
+                       tail=None)
+
+
 
     def add(self):
         """Add practice session."""
@@ -137,17 +189,17 @@ class Practice:
              'links'         : self.links,
              'priority'      : self.priority,
              'status'        : self.status,
-             'created'       : [time.time()],
-             'log'           : [''],
+             'created'       : [round(time.time())],
+             'log'           : ['start'],
              'count'         : [0],
              'goal'          : self.goal,
-             'urg'           : ['???']}
-        print(t)
+             'urg'           : [0]}
         df = pd.DataFrame(t,index=self.ID)
         df.index.name = 'ID'
         self.data = pd.concat([self.data,df])
-        self._save()
+        self._update()
         self._niceprint(tail=10)
+        self.view()
         print('\n',f"Practice {self.ID} successfully created!")
 
 
@@ -155,8 +207,8 @@ class Practice:
         """Delete practice with inputed ID."""
         self.backup = self.data.copy()
         for i in self.ID:
-            if i in self.data['ID']:
-                self.data = self.data[self.data['ID'] != i]
+            if i in self.data.index:
+                self.data.drop(index=[i],inplace=True)
             else:
                 print(f'No practice with ID {i}')
         self._save()
@@ -190,10 +242,10 @@ class Practice:
                 if ID[0] in self.data.index:
                     self.obj = self.data.loc[ID[0],:]
                     print(f"""
-{'=' * (len(str(self.ID[0]))+42+len(self.obj['name']))}
-({self.ID[0]}) {int(self.obj['status'])} {self.obj['name']:>39}
+{'=' * (len(str(ID[0]))+42+len(self.obj['name']))}
+({ID[0]}) {int(self.obj['status'])} {self.obj['name']:>39}
 {int(self.obj['count'])}/{int(self.obj['goal']):<10} {self.obj['priority']} {self.obj['urg']}
-{'=' * (len(str(self.ID[0]))+42+len(self.obj['name']))}
+{'=' * (len(str(ID[0]))+42+len(self.obj['name']))}
 
 *CATEGORY*
 {self.obj['category']:<30}
@@ -203,10 +255,10 @@ class Practice:
 
 *TAGS*
 {self.obj['tags']}
-{'_' * (len(str(self.ID[0]))+42+len(self.obj['name']))}
+{'_' * (len(str(ID[0]))+42+len(self.obj['name']))}
 
 {self.obj['description']}
-{'_' * (len(str(self.ID[0]))+42+len(self.obj['name']))}
+{'_' * (len(str(ID[0]))+42+len(self.obj['name']))}
 
 *LINKS*
 {self.obj['links']}
@@ -214,45 +266,47 @@ class Practice:
 *CREATED*
 {self._format_date(self.obj['created'])}
 
-*LOG*
-{self._format_date(self.obj['log'])}""")
+*LAST LOGGED*
+{self._format_date(self.obj['log'])}
+""")
 
 
-    def ls(self):
+    def ls(self,df=None):
         """List practices."""
+        if df == None: df = self.data
         drop_list = []
         # MIGHT BE PUT INSIDE ANOTHER FUNCTION
         if self.ID:                                                             #ID
-            drop_list += [i for i in self.data.index if i not in self.ID]
+            drop_list += [i for i in df.index if i not in self.ID]
             print(drop_list)
         if self.category:
-            for ID in self.data.index:
-                if self.data.loc[ID,'category'] != self.category:
+            for ID in df.index:
+                if df.loc[ID,'category'] != self.category:
                     drop_list.append(ID)
         if self.tags:
             for tag in self.tags:
-                for ID in self.data.index:
-                    if type(self.data.loc[ID,'tags']) != str:
+                for ID in df.index:
+                    if type(df.loc[ID,'tags']) != str:
                         drop_list.append(ID)
                     else:
-                        if tag not in self.data.loc[ID,'tags'].split(' '):
+                        if tag not in df.loc[ID,'tags'].split(' '):
                             drop_list.append(ID)
         if self.name:
-            for ID in self.data.index:
-                if self.name[0] not in self.data.loc[ID,'name'].split(' '):
+            for ID in df.index:
+                if self.name[0] not in df.loc[ID,'name'].split(' '):
                     drop_list.append(ID)
         if self.instrument:
             for inst in self.instrument:
-                for ID in self.data.index:
-                    if inst not in self.data.loc[ID,'instrument'].split(' '):
+                for ID in df.index:
+                    if inst not in df.loc[ID,'instrument'].split(' '):
                         drop_list.append(ID)
         if self.priority:
-            for ID in self.data.index:
-                if self.priority != self.data.loc[ID,'priority'] :
+            for ID in df.index:
+                if self.priority != df.loc[ID,'priority'] :
                     drop_list.append(ID)
         if self.status:
-            for ID in self.data.index:
-                if self.status != self.data.loc[ID,'status'] :
+            for ID in df.index:
+                if self.status != df.loc[ID,'status'] :
                     drop_list.append(ID)
         # goal
         # log count created
@@ -266,8 +320,49 @@ class Practice:
 
     def practice(self):
         """Choose practice or get weighted random practice and launch it."""
-        if input('Choose practice?\n').upper() in 'YES':
-            subprocess.run(f'xdg-open {self.link}'.split(' '))
+        if self.ID == None:
+            pid = self._practice_picker()
+            while input(f"Choose practice {pid}: {self.data.loc[pid,'name']}?\n").upper() not in 'Y':
+                pid = self._practice_picker()
+            self.ID = [pid]
+        self.view()
+        if input("Confirm?\n") == 'n':
+            return
+        if self.count:
+            count = self.count
+        else:
+            count = 1
+        self.data.loc[self.ID,'log'] += ' '+str(hex(round(time.time())))
+        self.data.loc[self.ID,'count'] += count
+        self._save()
+        print(f"{count} session(s) logged!\n")
+        if self.data.loc[self.ID[0],'links'] != np.nan:
+            if input('Open links?\n').upper() == 'Y':
+                subprocess.run(f'xdg-open {self.links}'.split(' '))
+
+    def on(self):
+        """Activate practice."""
+        if self.ID:
+            for i in self.ID:
+                self.data.loc[i,'status'] = 1
+                self.view(manual=i)
+            self._save()
+
+    def off(self):
+        """Inactivate practice."""
+        if self.ID:
+            for i in self.ID:
+                self.data.loc[i,'status'] = 0
+                self.view(manual=i)
+            self._save()
+
+    def archive(self):
+        """Archive practice."""
+        if self.ID:
+            for i in self.ID:
+                self.data.loc[i,'status'] = 2
+                self.view(manual=i)
+            self._save()
 
     def stats(self):
         """Give stats about practising."""
@@ -285,7 +380,7 @@ practice = Practice()
 parser = argparse.ArgumentParser(prog=('PPP'),
                                  description='PracticePracticePractice (ppp)',
                                  epilog='this is the epilog')
-parser.add_argument('cmd',choices = practice.cmds,nargs='?',default='ls')
+parser.add_argument('cmd',choices = [i for i in Practice.__dict__.keys() if i[:1] != '_'],nargs='?',default='ls')
 parser.add_argument('-i', '--ID',nargs='+', type=int)
 parser.add_argument('-C','--category',choices = practice.categories)
 parser.add_argument('-N','--name',nargs='+')
@@ -301,7 +396,7 @@ parser.add_argument('-g', '--goal',type=int)
 parser.add_argument('-u','--urg')
 parser.add_argument('--created')
 parser.add_argument('--log')
-parser.add_argument('--count')
+parser.add_argument('--count',type=int)
 
 a = parser.parse_args(namespace=practice)
 # print(practice.ID)
@@ -313,8 +408,8 @@ a = parser.parse_args(namespace=practice)
 # print(practice.count)
 print(practice.__dict__)
 print("#"*50)
+print("#"*50)
 Practice.__dict__[practice.cmd](practice)
 print("#"*50)
 # print(practice.data.loc[practice.ID[0],:])
-print("#"*50)
 # print(practice.data)

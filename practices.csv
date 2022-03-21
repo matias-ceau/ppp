@@ -1,15 +1,2 @@
-ID,category,name,instrument,tags,description,links,priority,status,created,log,count,goal,urg
-20,etudes,francis,bass,,,,H,1.0,1647618807.3711522,,0.0,10.0,5.201652598452862
-21,etudes,francis,bass,,,,H,1.0,1647618810.2542555,,0.0,10.0,5.201650672457186
-22,etudes,francis,bass,,,,H,1.0,1647618811.503752,,0.0,10.0,5.201649838893158
-23,etudes,francis,bass,,,,H,1.0,1647618812.3835957,,0.0,10.0,5.201649251857179
-24,etudes,francis,bass,,,,H,1.0,1647618813.0287795,,0.0,10.0,5.201648822412018
-25,etudes,francis,bass,,,,H,1.0,1647618813.5335078,,0.0,10.0,5.2016484862240135
-26,etudes,francis,bass,,,,H,0.0,1647618814.1160915,,0.0,10.0,0.0
-27,etudes,francis,bass,,,,H,0.0,1647618814.7845738,,0.0,10.0,0.0
-28,etudes,francis,bass,,,,H,0.0,1647618815.3310213,,0.0,10.0,0.0
-29,etudes,francis,bass,,,,H,0.0,1647618815.776338,,0.0,10.0,0.0
-30,etudes,francis,bass,,,,H,0.0,1647618816.1954696,,0.0,10.0,0.0
-1,etudes,francis,guitar,,,,H,0.0,1647618835.328139,,0.0,10.0,0.0
-2,etudes,francis,bass,,,,H,1.0,1647618836.144643,,0.0,10.0,5.201633377638508
-3,etudes,francis,bass,,,,H,0.0,1647618836.7950766,,0.0,10.0,0.0
+ID,category,name,instrument,tags,description,links,priority,status,created,count,goal,urg,log
+1,etudes,francis,bass,,,,.,0.0,1647881953.0,0.0,10.0,0.0,start
