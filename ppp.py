@@ -17,24 +17,29 @@ from tabulate import tabulate
 class Practice:
     """Blabla."""
 
+    ROOT_DIR  = os.path.dirname(__file__)
+    CONFIG    = os.path.join(ROOT_DIR,'config.yaml')
+    PRACTICES = os.path.join(ROOT_DIR,'practices.csv')
+    BACKUP    = os.path.join(ROOT_DIR,'backup.csv')
+
     def __init__(self):
-        with open('config.yaml') as f:
+        with open(self.CONFIG) as f:
             config            = yaml.load(f, Loader=yaml.FullLoader)
             self.__dict__.update(config)
-        self.data             = self._getdata("practices.csv")
-        self.backup           = self._getdata("backup.csv")
+        self.data             = self._getdata(self.PRACTICES)
+        self.backup           = self._getdata(self.BACKUP)
         self.obj              = None
         self.excluded_columns = ['description','links','created','log']
         self._check_and_archive()
         self._update()
 
     def _getdata(self,path):
-        if path not in os.listdir('.'):
+        try:
+            return pd.read_csv(path,index_col=0,converters={'ID':int})
+        except FileNotFoundError:
             df = pd.DataFrame({i:[] for i in self.labels})
             df.index.name = 'ID'
             return df
-        else:
-            return pd.read_csv(path,index_col=0,converters={'ID':int})
 
     def _update(self):
         for i in self.data.index:
@@ -42,8 +47,8 @@ class Practice:
             self._save()
 
     def _save(self):
-        self.backup.to_csv('backup.csv')
-        self.data.to_csv("practices.csv")
+        self.backup.to_csv(self.BACKUP)
+        self.data.to_csv(self.PRACTICES)
 
     def _list(self,thg):
         if type(thg) == list:
@@ -164,7 +169,7 @@ class Practice:
                 for thing in ['instrument', 'category', 'length']:
                     if self.__dict__[thing]:
                         if df.loc[i,thing] != self.__dict__[thing]:
-                            df.drop([i],inplace=True) 
+                            df.drop([i],inplace=True)
                 choosing_list += [i]*round(1000*self.data.loc[i,'urg'])
         pick = random.choice(choosing_list)
         return pick
@@ -406,9 +411,9 @@ lenght: {self.obj['length']}
 
     def undo(self):
         """Return to backup.csv."""
-        subprocess.run('mv backup.csv temp.csv'.split(' '))
-        subprocess.run('mv practices.csv backup.csv'.split(' '))
-        subprocess.run('mv temp.csv practices.csv'.split(' '))
+        subprocess.run('mv {self.BACKUP} temp.csv'.split(' '))
+        subprocess.run(f'mv {self.PRACTICES} {self.BACKUP}'.split(' '))
+        subprocess.run(f'mv temp.csv {self.PRACTICES}'.split(' '))
 
 #==========================================================================================
 
@@ -437,3 +442,4 @@ parser.add_argument('--count',type=int)
 
 a = parser.parse_args(namespace=practice)
 Practice.__dict__[practice.cmd](practice)
+print(practice.cmd)
