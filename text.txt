@@ -1,12 +1,12 @@
-python3 ppp.py add -I piano -C skills -g 1 -s 1 -L -N C home chords &&\
-python3 ppp.py add -I piano -C skills -N G home chords &&\
-python3 ppp.py add -I piano -C skills -N D home chords &&\
-python3 ppp.py add -I piano -C skills -N A home chords &&\
-python3 ppp.py add -I piano -C skills -N E home chords &&\
-python3 ppp.py add -I piano -C skills -N B home chords &&\
-python3 ppp.py add -I piano -C skills -N Fsh home chords &&\
-python3 ppp.py add -I piano -C skills -N Db home chords &&\
-python3 ppp.py add -I piano -C skills -N Ab home chords &&\
-python3 ppp.py add -I piano -C skills -N Eb home chords &&\
-python3 ppp.py add -I piano -C skills -N Bb home chords &&\
-python3 ppp.py add -I piano -C skills -N F home chords
+python3 ppp.py add -I piano -C skills -g 5 -s 1 -L -N C shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N G shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N D shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N A shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N E shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N B shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N Fsh shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N Db shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N Ab shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N Eb shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N Bb shell 251 &&\
+python3 ppp.py add -I piano -C skills -g 5 -L -N F shell 251

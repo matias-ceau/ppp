@@ -12,7 +12,7 @@ special_tags:
     # composition
     # theory
     ear_training:     10
-    retranscription:  10
+    retr:             10
 
 instruments:
     bass:   80

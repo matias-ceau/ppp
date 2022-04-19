@@ -68,6 +68,7 @@ class Practice:
                    tail=False,
                    ascending=False,
                    drop_list=None,
+                   shown=True,
                    one=False):
         if type(df) == str:
             if df == 'default':
@@ -86,6 +87,9 @@ class Practice:
             df = df.tail(tail)
         if head:
             df = df.head(head)
+        if shown:
+            sh = [i[0].upper() for i in df.columns]
+            df.columns = sh
         print(tabulate(df, headers='keys', tablefmt='psql', showindex=True))
 
     def _check_and_archive(self):
@@ -127,6 +131,9 @@ class Practice:
         urgency *= 2-(abs(p['goal']-p['count'])/p['goal'])
         urgency *= self.priorities[p['priority']]
         urgency *= 1 + abs(time.time() - p['created'])/self.time_constant
+        if p['log'] != 'start':
+            timedelta = (int(time.time()) - int(p['log'].split(' ')[-1],16))/864_000
+            urgency *= 1/(1 + 10*np.exp(-0.5*timedelta))
         return round(urgency/100,3)
 
     def _format_date(self,date):
