@@ -1,0 +1,170 @@
+ID,category,name,instrument,tags,description,links,priority,status,created,count,goal,urg,length,log
+1,theory,essential sight reading p2,bass,scott,,https://tinyurl.com/2p8jkn7k,.,1,1647893290,1,4,0.249,2,start 0x625da813
+2,theory,essential sight reading p3,bass,scott,,https://tinyurl.com/457zv2uc,.,0,1647893377,0,5,0.0,2,start
+3,theory,essential sight reading p4,bass,scott,,https://tinyurl.com/2p96rbyn,.,0,1647893418,0,5,0.0,2,start
+4,theory,essential sight reading p5,bass,scott,,https://tinyurl.com/3j5jkymT,.,0,1647893481,0,5,0.0,2,start
+5,theory,essential sight reading p6,bass,scott,,https://tinyurl.com/25dtnzyf,.,0,1647893524,0,3,0.0,2,start
+6,skills,walking bass introducing 5th,bass,jazz,,https://tinyurl.com/5n99kt9y,.,2,1647893742,3,2,0.0,2,start 0x62488d1e 0x62533006 0x625332b0
+7,skills,walking bass 3 chromatic approach,bass,jazz,,https://tinyurl.com/4xtrvw34,.,0,1647893805,0,2,0.0,2,start
+8,skills,walking bass 4 3rds,bass,jazz,,https://tinyurl.com/2p99ubvn,.,0,1647893854,0,2,0.0,2,start
+9,skills,walking bass 5,bass,jazz,,https://tinyurl.com/bdswhtmb,.,0,1647893918,0,3,0.0,2,start
+10,skills,blues major part 2,bass,blues,,https://scottsbasslessons.com/courses/blues-major-part-2/introduction/introduction-1,.,0,1647894048,0,2,0.0,2,start
+11,skills,blues minor part 1,bass,blues,,https://scottsbasslessons.com/courses/blues-minor-part-1/introduction/introduction-1,.,0,1647894074,0,2,0.0,2,start
+12,skills,blues minor part 2,bass,blues,,https://scottsbasslessons.com/courses/blues-minor-part-2/introduction/introduction-1,.,0,1647894105,0,2,0.0,2,start
+13,skills,blues variation p1,bass,blues,,https://scottsbasslessons.com/courses/blues-variations-part-1/introduction-1/introduction,.,0,1647894133,0,2,0.0,2,start
+14,skills,blues variation p2,bass,blues,,https://scottsbasslessons.com/courses/blues-variations-part-2/introduction/introduction-1,.,0,1647894150,0,2,0.0,2,start
+15,skills,blues british p1,bass,blues,,https://scottsbasslessons.com/courses/the-british-invasion-part-1/introduction/introduction,.,0,1647894174,0,2,0.0,2,start
+16,skills,blues british p2,bass,blues,,https://scottsbasslessons.com/courses/the-british-invasion-part-2/introduction/introduction,.,0,1647894195,0,2,0.0,2,start
+17,etudes,boss the bossa,bass,blue_bossa,,https://scottsbasslessons.com/grading-level/level-2/level-2-practice?pieceId=188329,.,1,1647894340,0,10,1.978,2,start
+18,books,Barry Harris guitar,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647895179,1,20,0.188,2,start 0x6255b227
+19,books,how to improvise,guitar,,,books/crookImprovise.pdf,H,1,1647895553,0,25,2.901,2,start
+20,books,joe pass guitar method,none,,,books/joePass.pdf,.,1,1647895592,0,3,0.132,2,start
+21,books,levine jazz,none,,,books/levineJazz.pdf,.,1,1647895624,0,35,0.132,2,start
+22,books,levine piano,none,,,books/levinePiano.pdf,.,1,1647895651,1,20,0.025,2,start 0x6249bf97
+23,books,sher bass,none,,,books/sherBass.pdf,.,0,1647895684,0,20,0.0,2,start
+24,books,walking bassics,none,,,books/walkingBassics.pdf,.,0,1647896285,0,3,0.0,2,start
+25,books,polyrythms,none,,,books/polyrythmMagadani.pdf,.,0,1647896330,0,3,0.0,2,start
+26,books,bass grooves,bass,,,books/bassGrooves.pdf,H,1,1647896396,5,15,0.357,2,start 0x6242d8f8 0x62438f46 0x62545a5e 0x62546cee 0x62586237
+27,books,bass ron carter,none,,,books/ronCarter.pdf,.,0,1647896426,0,3,0.0,2,start
+28,books,friedland walking bass lines,none,,,books/walkingFriedland.pdf,.,0,1647896496,0,4,0.0,2,start
+29,books,connecting chords with linear harmony,none,,,books/linearHarmony.pdf,.,0,1647896547,0,15,0.0,2,start
+30,books,latin bass,none,,,books/latinBass.pdf,.,0,1647896578,0,15,0.0,2,start
+31,books,tonal harmony,none,,,books/kostkaPayne.pdf,.,0,1647896666,0,50,0.0,2,start
+32,skills,blind lemon,bass,,,blues01-lesson02-blind-lemon-blues.pdf,.,1,1647897426,1,3,0.827,1,start 0x623b539a
+33,skills,crossroads,bass,,,blues01-lesson02-crossroad.pdf,.,1,1647897426,0,3,2.241,2,start
+34,skills,dust my room,bass,,,blues01-lesson04-dust-my-room.pdf,.,1,1647897427,0,3,2.241,2,start
+35,skills,robert johnson,bass,,,blues01-lesson03-robert-johnson.pdf,.,1,1647897503,0,3,2.241,2,start
+36,standards,autumn leaves etude,guitar,etudes,,autumnLeavesEtudes.pdf autumnLeavesEtudes.mp3,M,1,1647898123,7,10,0.93,2,start 0x623ce15b 0x62404591 0x6242d7fc 0x624692e2 0x624b6f54 0x62523a24 0x62523a6b
+37,harmony,barry harris M6 drop 2,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647898749,1,10,0.533,2,start 0x6245d6f8
+38,harmony,barry harris m6 drop 2,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647898758,0,10,2.373,2,start
+39,harmony,barry harris m6 drop 3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898809,0,10,0.0,2,start
+40,harmony,barry harris M6 drop 3,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647898814,1,10,0.748,2,start 0x623a0bf9
+41,harmony,barry harris m6 drop 2and3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898822,0,10,0.0,2,start
+42,harmony,barry harris M6 drop 2and3,guitar,,,books/barryHarrisGuitar.pdf,.,1,1647898827,1,10,0.449,2,start 0x624b6f68
+43,harmony,barry harris M6 drop 2and4,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898831,0,10,0.0,2,start
+44,harmony,barry harris m6 drop 2and4,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898854,0,10,0.0,2,start
+45,harmony,barry harris 7 drop 2,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898868,0,10,0.0,2,start
+46,harmony,barry harris 7 drop 3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898873,0,10,0.0,2,start
+47,harmony,barry harris 7 drop 2and3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898879,0,10,0.0,2,start
+48,harmony,barry harris 7 drop 2and4,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898883,0,10,0.0,2,start
+49,harmony,barry harris 7b5 drop 2,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898893,0,10,0.0,2,start
+50,harmony,barry harris 7b5 drop 3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898898,0,10,0.0,2,start
+51,harmony,barry harris 7b5 drop 2and4,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898915,0,10,0.0,2,start
+52,harmony,barry harris 7b5 drop 2and3,guitar,,,books/barryHarrisGuitar.pdf,.,0,1647898919,0,10,0.0,2,start
+53,standards,blue bossa etude,guitar,etudes,,@bluebossaetude,.,0,1647899571,0,10,0.0,2,start
+54,standards,embraceable you,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901097,0,10,0.0,2,start
+55,standards,oh when the saints,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901098,0,10,0.0,2,start
+56,standards,au privave,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901098,0,10,0.0,2,start
+57,standards,never will i marry,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901099,0,10,0.0,2,start
+58,standards,cool blues,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901099,0,10,0.0,2,start
+59,standards,time after time,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901100,0,10,0.0,2,start
+60,standards,i fall in love too easily,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901101,0,10,0.0,2,start
+61,standards,there will never be another you,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901101,0,10,0.0,2,start
+62,standards,youre driving me crazy,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901102,0,10,0.0,2,start
+63,standards,do it the hard way,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901102,0,10,0.0,2,start
+64,standards,stomping at the savoy,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901103,0,10,0.0,2,start
+65,standards,blue room,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901103,0,10,0.0,2,start
+66,standards,in the wee house of the,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901104,0,10,0.0,2,start
+67,standards,blue train,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901104,0,10,0.0,2,start
+68,standards,second balcony jump,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901105,0,10,0.0,2,start
+69,standards,soy califa,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901106,0,10,0.0,2,start
+70,standards,interplay,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901106,0,10,0.0,2,start
+71,standards,someday my prince will come,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901107,0,10,0.0,2,start
+72,standards,the more i see you,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901107,0,10,0.0,2,start
+73,standards,remember,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901108,0,10,0.0,2,start
+74,standards,stompin at the savoy land,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901109,0,10,0.0,2,start
+75,standards,doodlin,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901109,0,10,0.0,2,start
+76,standards,four,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901110,0,10,0.0,2,start
+77,standards,solar,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901110,0,10,0.0,2,start
+78,standards,blue bossa,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901111,0,10,0.0,2,start
+79,standards,ceora,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901112,0,10,0.0,2,start
+81,standards,so what,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901113,0,10,0.0,2,start
+82,standards,freddie freeloader,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901114,0,10,0.0,2,start
+83,standards,bags groove,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901114,0,10,0.0,2,start
+84,standards,autumn leaves,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901115,0,10,0.0,2,start
+85,standards,bye bye blackbird,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901116,0,10,0.0,2,start
+86,standards,four davies,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901117,0,10,0.0,2,start
+87,standards,solar davies,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901117,0,10,0.0,2,start
+89,standards,doxy,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901119,0,10,0.0,2,start
+90,standards,green dolphin street,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901119,0,10,0.0,2,start
+91,standards,blue train,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901120,0,10,0.0,2,start
+92,standards,take five,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901121,0,10,0.0,2,start
+93,standards,bye bye blackbird,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901122,0,10,0.0,2,start
+94,standards,surrey with the fringe on top,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901123,0,10,0.0,2,start
+95,standards,stompin at the savoy richie,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901123,0,10,0.0,2,start
+96,standards,st thomas,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901124,0,10,0.0,2,start
+97,standards,tip toe,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901125,0,10,0.0,2,start
+98,standards,no blues,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901126,0,10,0.0,2,start
+99,standards,freddie freeloader wynton,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901127,0,10,0.0,2,start
+100,standards,someday my prince kelly,guitar,retr,,50easyjazzsolos.pdf,.,0,1647901127,0,10,0.0,2,start
+101,skills,kenny burrel con carne,guitar,retr jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901760,0,10,0.0,2,start
+102,skills,charlie christian grand slam,guitar,retr jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901761,0,10,0.0,2,start
+103,skills,grant green cool blues,guitar,retr jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901762,0,10,0.0,2,start
+104,skills,montgomery four on six,guitar,retr jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901763,0,10,0.0,2,start
+105,skills,george benson borgia stick,guitar,retr jens,,https://jenslarsen.nl/5-easy-solos-to-learn-by-ear-and-boost-your-jazz-guitar-skills/,.,0,1647901764,0,10,0.0,2,start
+106,skills,50 licks chapter 1,guitar,,1 to 10,50lickspatreon.pdf,.,1,1647901988,1,10,0.44,2,start 0x624dca61
+107,skills,50 licks chapter 2,guitar,,11 to 20,50lickspatreon.pdf,.,0,1647902009,0,10,0.0,2,start
+108,skills,50 licks chapter 3,guitar,,21 to 30,50lickspatreon.pdf,.,0,1647902021,0,10,0.0,2,start
+109,skills,50 licks chapter 4,guitar,,31 to 40,50lickspatreon.pdf,.,0,1647902080,0,10,0.0,2,start
+110,skills,50 licks chapter 5,guitar,,41 to 50,50lickspatreon.pdf,.,0,1647902090,0,10,0.0,2,start
+88,standards,there will never be another you young,guitar,retr,,50easyjazzsolos.pdf,.,0,1647902785,0,10,0.0,2,start
+111,standards,oh lady be good,guitar,retr,,50easyjazzsolos.pdf,.,0,1647902785,0,10,0.0,2,start
+112,standards,youre driving me crazy young,guitar,retr,,50easyjazzsolos.pdf,.,0,1647902786,0,10,0.0,2,start
+113,standards,you dont know what love is,guitar,retr,,50easyjazzsolos.pdf,.,0,1647902787,0,10,0.0,2,start
+80,standards,there will never be another you young,guitar,retr,,50easyjazzsolos.pdf,.,0,1647903012,0,10,0.0,2,start
+114,standards,oh lady be good,guitar,retr,,50easyjazzsolos.pdf,.,0,1647903013,0,10,0.0,2,start
+115,standards,youre driving me crazy young,guitar,retr,,50easyjazzsolos.pdf,.,0,1647903014,0,10,0.0,2,start
+116,standards,you dont know what love is,guitar,retr,,50easyjazzsolos.pdf,.,0,1647903015,0,10,0.0,2,start
+117,skills,C major scale,piano,,,,.,1,1647903179,0,1,2.108,1,start
+118,skills,G major scale,piano,,,,.,0,1647903180,0,10,0.0,2,start
+119,skills,D major scale,piano,,,,.,0,1647903181,0,10,0.0,2,start
+120,skills,A major scale,piano,,,,.,0,1647903181,0,10,0.0,2,start
+121,skills,E major scale,piano,,,,.,0,1647903182,0,10,0.0,2,start
+122,skills,B major scale,piano,,,,.,0,1647903183,0,10,0.0,2,start
+123,skills,Fsh major scale,piano,,,,.,0,1647903184,0,10,0.0,2,start
+124,skills,Db major scale,piano,,,,.,0,1647903185,0,10,0.0,2,start
+125,skills,Ab major scale,piano,,,,.,0,1647903186,0,10,0.0,2,start
+126,skills,Eb major scale,piano,,,,.,0,1647903187,0,10,0.0,2,start
+127,skills,Bb major scale,piano,,,,.,0,1647903188,0,10,0.0,2,start
+128,skills,F major scale,piano,,,,.,0,1647903189,0,10,0.0,2,start
+129,skills,C home chords,piano,,,,.,1,1647903269,0,1,2.108,1,start
+130,skills,G home chords,piano,,,,.,0,1647903270,0,10,0.0,2,start
+131,skills,D home chords,piano,,,,.,0,1647903271,0,10,0.0,2,start
+132,skills,A home chords,piano,,,,.,0,1647903272,0,10,0.0,2,start
+133,skills,E home chords,piano,,,,.,0,1647903273,0,10,0.0,2,start
+134,skills,B home chords,piano,,,,.,0,1647903274,0,10,0.0,2,start
+135,skills,Fsh home chords,piano,,,,.,0,1647903275,0,10,0.0,2,start
+136,skills,Db home chords,piano,,,,.,0,1647903276,0,10,0.0,2,start
+137,skills,Ab home chords,piano,,,,.,0,1647903277,0,10,0.0,2,start
+138,skills,Eb home chords,piano,,,,.,0,1647903278,0,10,0.0,2,start
+139,skills,Bb home chords,piano,,,,.,0,1647903279,0,10,0.0,2,start
+140,skills,F home chords,piano,,,,.,0,1647903280,0,10,0.0,2,start
+141,standards,red clay wilkins,guitar,retr,,,.,1,1648382019,2,4,0.923,2,start 0x62415b16 0x62415b67
+142,etudes,red clay bassline,bass,,,,H,1,1648568385,4,10,0.816,2,start 0x62438ec5 0x62496cb8 0x62496cbf 0x6249a32b
+143,skills,scale run 3rds,guitar,,,,H,1,1648904751,1,10,0.794,1,start 0x624dc588
+144,skills,scale run arpeggios,guitar,,,,H,1,1648904780,1,10,0.854,1,start 0x624b728d
+145,skills,scale run triads,guitar,,,,H,1,1648904910,1,10,0.827,1,start 0x624c795c
+147,skills,lesson 3 exercises 1 2516,bass,,,WalkingBass-02-5ths-CourseBook.pdf,.,1,1648924840,0,10,2.017,2,start
+146,skills,lesson 4 jazz blues,bass,,,WalkingBass-02-5ths-CourseBook.pdf,.,1,1648925807,0,10,2.017,2,start
+148,skills,C shell 251,piano,,,,.,1,1649000267,0,5,1.883,1,start
+149,skills,G shell 251,piano,,,,.,0,1649000268,0,5,0.0,1,start
+150,skills,D shell 251,piano,,,,.,0,1649000269,0,5,0.0,1,start
+151,skills,A shell 251,piano,,,,.,0,1649000270,0,5,0.0,1,start
+152,skills,E shell 251,piano,,,,.,0,1649000271,0,5,0.0,1,start
+153,skills,B shell 251,piano,,,,.,0,1649000273,0,5,0.0,1,start
+154,skills,Fsh shell 251,piano,,,,.,0,1649000274,0,5,0.0,1,start
+155,skills,Db shell 251,piano,,,,.,0,1649000275,0,5,0.0,1,start
+156,skills,Ab shell 251,piano,,,,.,0,1649000276,0,5,0.0,1,start
+157,skills,Eb shell 251,piano,,,,.,0,1649000277,0,5,0.0,1,start
+158,skills,Bb shell 251,piano,,,,.,0,1649000279,0,5,0.0,1,start
+159,skills,F shell 251,piano,,,,.,0,1649000280,0,5,0.0,1,start
+160,standards,autumn leaves comping,guitar,chords,,,.,1,1649110968,2,100,0.328,1,start 0x624b7189 0x62523ae6
+161,standards,blue bossa comping,guitar,chords,,,.,1,1649111016,2,100,0.328,1,start 0x624b71a1 0x62523b1e
+162,standards,autumn leaves walking bass,bass,bass,,,.,1,1649111096,2,100,0.295,2,start 0x624b71ab 0x62523b27
+163,standards,blue bossa bass,bass,bass,,,.,1,1649111218,0,100,2.092,1,start
+164,standards,blue bossa melody,guitar,melody,,,.,1,1649111292,1,100,0.404,1,start 0x624b71b6
+165,standards,autumn leaves melody,guitar,melody,,,.,1,1649111327,2,100,0.328,1,start 0x624b71c3 0x62523b31
+166,standards,take five piano comp,piano,,,https://youtu.be/iSAfXTEEvvo,H,1,1649279619,1,100,0.594,2,start 0x624f5f69
+167,standards,take five bassline,bass,,,https://youtu.be/_OniCyc9Bp0,H,1,1649279773,1,100,0.6,2,start 0x6250db54
+168,standards,take five melody,guitar,,,https://youtu.be/_OniCyc9Bp0,H,1,1649279957,2,100,0.673,2,start 0x62507415 0x6250db45
+169,harmony,solo app intervals,guitar,,,,H,0,1649631963,0,100,0.0,2,start

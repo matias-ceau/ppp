@@ -1,0 +1,61 @@
+res_path: ../music_res
+
+special_tags:
+    any_tag:          1
+    # standards
+    autumn_leaves:    5
+    blue_bossa:       20
+    # skills
+    # melody
+    # harmony
+    # etudes
+    # composition
+    # theory
+    ear_training:     10
+    retr:             10
+
+instruments:
+    bass:   80
+    guitar: 100
+    drums:  10
+    piano:   70
+    ukulele:    5
+    none:   0
+    any:    0
+
+categories:
+    standards:   100
+    skills:      90
+    melody:      80
+    harmony:     80
+    etudes:      50
+    composition: 40
+    theory:      80
+    books:       10
+
+labels:     [category, name, instrument, tags, description, links, priority, status, created, count, goal, urg, length, log]
+modifiable: [category, name, instrument, tags, description, links, priority, status, goal, length]
+
+default_goal: 10
+default_status: 0
+default_priority: '.'
+time_constant: 7_776_000
+
+priorities:
+    H: 2
+    M: 1.5
+    .: 1
+    L: 0.5
+
+cmds: [add,delete,mod,ls,practice,stats,undo,view,on,off,archive,open,next]
+
+status_types:
+    0: inactive
+    1: active
+    2: archived
+
+verbosity:
+    0: 20
+    1: 40
+    2: 80
+    3: 999
